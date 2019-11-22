@@ -39,4 +39,3 @@ Due to some last minute issues with our mesh network and Processing, we were unf
 -   9 volt Battery
 -   Wooden enclosure
 
-[embed]https://youtu.be/3_mbtyxD_OA[/embed]
