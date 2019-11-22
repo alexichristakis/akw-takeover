@@ -28,7 +28,11 @@ Finally, hot glue the shaft of the motor to the hole in the back of the paper. I
 That's it! You've completed the pinwheel portion. Mine spun pretty easily, which you can see in [this demo](https://youtu.be/XqrjjxGu9Co). You can decorate however you want; I decided to emulate the arrow tattoos on Aang from Avatar: The Last Airbender, but you can do whatever you like. To finish the sensor, attach an ESP32 to the dowel (I used rubber bands) and connect the jumpers off the DC motor to the input pin of your choice and ground on the ESP32. Flash arduino code in this folder to your ESP32 and it will connect to the mesh network. (Warning: the code here includes taking in input from the volcano sensor in this repo. It shouldn't be a problem to run, but fair warning!)
 
 The final product may look something like this: ![](./docs/pinwheel_front.jpg)
+
+The following picture shows the ESP32 on the back. Your very, very simple circuit could look like this:
 ![](./docs/pinwheel_back.jpg)
+
+Note: you may need to amplify the voltage from the motor. Or use a nicer motor. As is, this project is not very viable.
 
 ## Behavior and Technical Difficulties
 
