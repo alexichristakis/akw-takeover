@@ -28,7 +28,7 @@ Due to some last minute issues with our mesh network and Processing, we were unf
 
 ## Circuit Diagram
 
-[![](https://201903cpsc33401.canvaspress.yale.edu/files/2019/11/circuit.png)](https://201903cpsc33401.canvaspress.yale.edu/files/2019/11/circuit.png)
+![alt text](https://github.com/alexichristakis/akw-takeover/blob/master/mesh/sam-water-input/Pictures%20and%20Video/circuit.png)
 
 ## Parts List
 
