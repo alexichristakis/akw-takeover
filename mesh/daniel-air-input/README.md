@@ -3,7 +3,8 @@
 Within the elemental theme we chose, I decided on air. I thought a pinwheel was a classic, simple, and on-theme device to make with satisfying interaction. I thought that it would be really cool to make my own sensor with a pinwheel by generating voltage with a DC motor when the pinwheel spins.
 
 ## Video Demo
-(filler)
+A demonstration of the intended behavior:
+https://youtu.be/7gcST8KZ-As
 
 ## Design/How-To
 
@@ -24,7 +25,7 @@ Next, use a thumbtack to poke a hole in the center of the paper from the back. W
 Finally, hot glue the shaft of the motor to the hole in the back of the paper. It should look like this:
 ![](./docs/pinwheel_side.jpg)
 
-That's it! You've completed the pinwheel portion. You can decorate however you want; I decided to emulate the arrow tattoos on Aang from Avatar: The Last Airbender, but you can do whatever you like. To finish the sensor, attach an ESP32 to the dowel (I used rubber bands) and connect the jumpers off the DC motor to the input pin of your choice and ground on the ESP32. Flash arduino code in this folder to your ESP32 and it will connect to the mesh network. (Warning: the code here includes taking in input from the volcano sensor in this repo. It shouldn't be a problem to run, but fair warning!)
+That's it! You've completed the pinwheel portion. Mine spun pretty easily, which you can see in [this demo](https://youtu.be/XqrjjxGu9Co). You can decorate however you want; I decided to emulate the arrow tattoos on Aang from Avatar: The Last Airbender, but you can do whatever you like. To finish the sensor, attach an ESP32 to the dowel (I used rubber bands) and connect the jumpers off the DC motor to the input pin of your choice and ground on the ESP32. Flash arduino code in this folder to your ESP32 and it will connect to the mesh network. (Warning: the code here includes taking in input from the volcano sensor in this repo. It shouldn't be a problem to run, but fair warning!)
 
 The final product may look something like this: ![](./docs/pinwheel_front.jpg)
 ![](./docs/pinwheel_back.jpg)
