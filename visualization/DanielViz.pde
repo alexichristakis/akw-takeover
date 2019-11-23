@@ -106,7 +106,7 @@ class DanielViz {
                 } else {
                     image( intro[frameCount%17], 0, 0, width, height );
                     if(frameCount%17 == 0) {
-                        current == 0;
+                        current = 0;
                         frameCount = 0;
                     }
                 }

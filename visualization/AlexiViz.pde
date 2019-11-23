@@ -27,7 +27,7 @@ class AlexiViz {
         0  // alexi
     };
 
-    int[][] constructNewData(int[] samData, int danielData, int sarimData, int[] sabrinaData, int alexiData) {
+    int[][] constructNewData(int[] samData, int danielData, int sarimData, int[] sabrinaData,int alexiData) {
         summation[0] += samData[0] / 1500.0 + samData[1] / 1500.0 + samData[2] / 1500.0;
         summation[1] += danielData / 4096.0;
         summation[2] += sarimData;
@@ -59,12 +59,12 @@ class AlexiViz {
         for (float rad = 0; rad < TWO_PI; rad += TWO_PI / 5.0) {
             fill(elementColors[i][0]);
             noStroke();
-            
+
             arc(width / 2, height / 2, width / 2, width / 2, rad, rad + TWO_PI / 5.0, PIE);
-            
+
             fill(255, 255, 255);
             text(summation[i], width / 2 + width / 8 * cos(rad + TWO_PI / 10.0), height / 2 + width / 8 * sin(rad + TWO_PI / 10.0));
-            
+
             i++;
         }
 

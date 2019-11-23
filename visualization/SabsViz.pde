@@ -18,34 +18,47 @@ class SabsViz {
     img.resize(width, height);
   }
 
-  void draw(int alexiData, int danielData, int sarimData, int[] samData, int[] sabrinaData) {
-    
-    // SABRINA ------------------------------------------------------
+  // FUNCTION TO CREATE TEST DATA (references SarimViz) -------------
+  
+  //int[][] generateRandomData() {
+  //  int[] samData = {int(random(5)), int(random(5)), int(random(5))};
+  //  int danielData = int(random(5));
+  //  int sarimData = int(random(5));
+  //  int[] sabrinaData = {int(random(5)), int(random(5))};
+  //  int alexiData = int(random(5));
+  //  int randomData[][] = this.constructNewData(samData, danielData, sarimData, sabrinaData, alexiData);
+  //  return randomData;
+  //}
 
-    if (sabrinaData[1] == 0) {
-      background(0);
-    } else if (sabrinaData[1] < 3) {
-      background(#f8f1a5);
-    } else if (sabrinaData[1] < 6) {
-      background(#f88e3a);
-    } else if (sabrinaData[1] < 10) {
-      background(#f86336);
-    } else if (sabrinaData[1] >= 10) {
-      background(#f80600);
-    } 
+  void draw(int alexiData, int danielData, int sarimData, int[] samData, int[] sabrinaData) {
+
+    int[][]rd = sarimViz.generateRandomData();
+    alexiData = rd[4][0];
+    danielData = rd[1][0];
+    samData = rd[0];
+    sarimData = rd[2][0];
+    sabrinaData = rd[3];
 
     // SARIM ------------------------------------------------------
     if (sarimData == 1 || sarimBool == true) {
-      image(img, width/2, height/2);
+      image(img, 0, 0);
       tint(255, 180);
       sarimBool = true;
       sarimCount += 1;
       if (sarimCount > 6) sarimBool = false;
     } else {
-      image(img, width/2, height/2);
+      image(img, 0, 0);
       tint(255, 0);
     }
 
+    // SABRINA ------------------------------------------------------
+
+    if (sabrinaData[1] <= 3) {
+      tint(0, 120, 120, 180);
+    } else if (sabrinaData[1] > 3) {
+      tint(120, 0, 120, 180);
+    }
+    
     // DANIEL and ALEXI ------------------------------------------------------
     if (danielData == 1) {
       danielRotation += .02;
@@ -55,7 +68,7 @@ class SabsViz {
     translate(width/4, height/2); 
     rotate(danielRotation * radians(45));
     fill(#f8964b); // orange
-    if (alexiData == 4095) ellipse(0, 0, 40, 40);
+    if (alexiData % 2 == 0) ellipse(0, 0, 40, 40);
     else rect(0, 0, 40, 40);
     popMatrix();
 
@@ -63,7 +76,7 @@ class SabsViz {
     translate(width/2, height/4); 
     rotate(2 * danielRotation * radians(45));
     fill(#63aaf8); // blue
-    if (alexiData == 4095) ellipse(0, 0, 70, 70);
+    if (alexiData % 2 == 0) ellipse(0, 0, 70, 70);
     else rect(0, 0, 70, 70);
     popMatrix();
 
@@ -71,7 +84,7 @@ class SabsViz {
     translate(width/2, 3*height/4); 
     rotate(.5 * danielRotation * radians(45));
     fill(#a6f87c); // green
-    if (alexiData == 4095) ellipse(0, 0, 100, 100);
+    if (alexiData % 2 == 0) ellipse(0, 0, 100, 100);
     else rect(0, 0, 100, 100);
     popMatrix();
 
@@ -79,7 +92,7 @@ class SabsViz {
     translate(3*width/4, height/2); 
     rotate(4 * danielRotation * radians(45));
     fill(#e5b1f8); // purple
-    if (alexiData == 4095) ellipse(0, 0, 10, 10);
+    if (alexiData % 2 == 0) ellipse(0, 0, 10, 10);
     else rect(0, 0, 10, 10);
     popMatrix();
 
@@ -105,6 +118,5 @@ class SabsViz {
       text(mytext[i], 10 + i*yDiff/2, 10 + i*xDiff);
     }
     popMatrix();
-    
   }
 }
