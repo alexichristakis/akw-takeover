@@ -1,6 +1,7 @@
 # AKW Takeover
 
 A group project for Yale CPSC 334 (Creative Embedded Systems)
+
 Team members: Sarim Abbas, Daniel Kaylor, Alexi Christakis, Sam Lopate, Sabrina Long
 
 ### Task 1 Documentation
@@ -40,3 +41,11 @@ My concept for this visualization was to encourage the occupants of AKW to arbit
 The theme for our project was "Elements." One of our main inspirations was the classic cartoon from our childhoods, *Avatar: The Last Airbender*. With this in mind, I chose to take on the element of air. I thought that I could find some interesting gifs that demonstrate just how original the show was with its treatment of elemental manipulation as well as tie in my visualization to the other sensors in the project. I found some cool airbending gifs and one that showed the four most recent avatars entering the "Avatar State," a mode which grants them heightened control over the elements and world-altering capabilities. I wanted to empower the user of my sensor to feel like an airbender themselves; I often think about how we can manipulate elements in similar, albeit less powerful, ways. Just blowing air from our mouths is elemental manipulation! Or splashing water. Or, even more out there, we have talking, which we consider to be completely mundane, but that's because the norm for us is that people have the ability to perceive vibrations in the air which can communicate totally abstract ideas to us. But what about hypothetical intelligent species that do not sense in this way? Would speaking seem like some form of telepathy to them if they have no way to perceive those vibrations? I love spinning the unremarkable abilities of humans into impressive, alien traits this way.
 
 My original idea was for the idle state of the visualization to repeat the gif of Aang floating with the ball of air, and then cycle through the avatar state and the gif of the man airbending when someone blew on the pinwheel. The lava gif would be used for when someone activated Sarim's volcano and my pinwheel at the same time. However, with my technical difficulties, I ended up only using Sarim's sensor to know when to play the lava gif, while the rest of the time I would just cycle through the other three gifs.
+
+#### Sabrina's visualization
+
+![Sabrina Vis](./docs/sab.png)
+
+Video: https://youtu.be/lH3Er2HlccU
+
+This visualization associates each group member's sensor data with a visual output that correspons to the way their sensor is meant to be interacted with. For example, readings from Daniel's pinwheel sensor determine the rotation of the squares/circles, Sam's amplitude sensor readings are reflected in the visualization by changing the x and y positions of the poem lines, and Sarim's lava joystick sensor displays a lava image when the circle is completed.
