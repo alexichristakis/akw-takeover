@@ -4,13 +4,13 @@ The idea for this sensor was born out of two factors: (1) a desire for students 
 
 To interact with the piece, the user rubs the fire starter stick between their hands, with the motion one might use when actually starting a fire. The ESP32 then sends the duration of time that the sensor has been touched to the mesh network. The piezo sensor is hidden. It acts as a measure of the amount of vibration occurring from the fire starting motion. The piezo value (0-4095) is sent directly to the mesh network. 
 
-![Fire Sensor](./docs/sab-enclosure.png)
+![Fire Sensor](./docs/sab-enclosure.jpg)
 
 Video demo on YouTube: https://youtu.be/lH3Er2HlccU
 
 ### Design Concept
 
-![All Sensors](./docs/all-sensors.png)
+![All Sensors](./docs/all-sensors.jpg)
 
 For this module, I actually created the enclosure for the sensors before I finalized which sensors I was going to incorporate. This time around, function followed form. I thought that only including a capacitive touch sensor would be too simplistic, so I added in the piezo sensor as a hidden sensing component. The fire design of my enclosure inspired our group's subsequent "elements" theme.
 
@@ -34,7 +34,7 @@ Assembly
 
 ### Sensors & Electronics
 
-![Piezo Sensor Setup](./docs/sab-piezo.png)
+![Piezo Sensor Setup](./docs/sab-piezo.jpg)
 
 Materials
 - Piezo sensor
