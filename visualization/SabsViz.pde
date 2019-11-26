@@ -7,6 +7,7 @@ int numLines = 26;
 float danielRotation = 1;
 boolean sarimBool = false;
 int sarimCount = 0;
+int sabMultiplier = 1;
 
 class SabsViz {
   SabsViz() {
@@ -17,18 +18,6 @@ class SabsViz {
     tint(255, 0); 
     img.resize(width, height);
   }
-
-  // FUNCTION TO CREATE TEST DATA (references SarimViz) -------------
-  
-  //int[][] generateRandomData() {
-  //  int[] samData = {int(random(5)), int(random(5)), int(random(5))};
-  //  int danielData = int(random(5));
-  //  int sarimData = int(random(5));
-  //  int[] sabrinaData = {int(random(5)), int(random(5))};
-  //  int alexiData = int(random(5));
-  //  int randomData[][] = this.constructNewData(samData, danielData, sarimData, sabrinaData, alexiData);
-  //  return randomData;
-  //}
 
   void draw(int alexiData, int danielData, int sarimData, int[] samData, int[] sabrinaData) {
 
@@ -54,11 +43,12 @@ class SabsViz {
     // SABRINA ------------------------------------------------------
 
     if (sabrinaData[1] <= 3) {
-      tint(0, 120, 120, 180);
+      sabMultiplier *= 3;
     } else if (sabrinaData[1] > 3) {
-      tint(120, 0, 120, 180);
+      sabMultiplier /= 3;
     }
-    
+    print(sabMultiplier);
+
     // DANIEL and ALEXI ------------------------------------------------------
     if (danielData == 1) {
       danielRotation += .02;
@@ -69,7 +59,7 @@ class SabsViz {
     rotate(danielRotation * radians(45));
     fill(#f8964b); // orange
     if (alexiData % 2 == 0) ellipse(0, 0, 40, 40);
-    else rect(0, 0, 40, 40);
+    else rect(0, 0, 40 * sabMultiplier, 40 * sabMultiplier);
     popMatrix();
 
     pushMatrix();
@@ -77,7 +67,7 @@ class SabsViz {
     rotate(2 * danielRotation * radians(45));
     fill(#63aaf8); // blue
     if (alexiData % 2 == 0) ellipse(0, 0, 70, 70);
-    else rect(0, 0, 70, 70);
+    else rect(0, 0, 70 * sabMultiplier, 70 * sabMultiplier);
     popMatrix();
 
     pushMatrix();
@@ -105,8 +95,8 @@ class SabsViz {
     rotate(-HALF_PI);
     fill(#f8eb48, 150); // yellow
 
-    xDiff = map(samData[0], 0, 600, 40, 50);
-    yDiff = map(samData[1], 0, 600, 20, 30);
+    xDiff = map(samData[0], 0, 600, 30, 50);
+    yDiff = map(samData[1], 0, 600, 20, 40);
 
     for (int i = 0; i < numLines / 2; i++) {
       text(mytext[i], 10 + i*yDiff, 10 + i*xDiff);
@@ -118,5 +108,7 @@ class SabsViz {
       text(mytext[i], 10 + i*yDiff/2, 10 + i*xDiff);
     }
     popMatrix();
+    
+    delay(50);
   }
 }
